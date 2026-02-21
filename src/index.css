@@ -78,6 +78,10 @@ body {
   padding: 0.9rem;
 }
 
+.sidebar-home {
+  padding: 0.8rem 0.9rem 0 0.9rem;
+}
+
 .sidebar-group > p {
   margin: 0 0 0.4rem;
   font-size: 0.68rem;
@@ -113,6 +117,108 @@ body {
   color: #10234b;
   background: linear-gradient(120deg, #f3f8ff, #c8dbff);
   font-weight: 600;
+}
+
+.home-shell {
+  height: 100%;
+  overflow: auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.home-hero {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(145deg, rgba(220, 234, 255, 0.78), rgba(255, 246, 236, 0.9)),
+    #fff;
+  box-shadow: 0 16px 34px rgba(23, 30, 47, 0.08);
+  padding: 1.25rem;
+}
+
+.home-kicker {
+  margin: 0 0 0.45rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.home-hero h1 {
+  margin: 0 0 0.55rem;
+  font-family: 'Fraunces', 'Times New Roman', serif;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.home-hero p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.home-stats {
+  margin-top: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.home-stats span {
+  border: 1px solid rgba(19, 70, 166, 0.2);
+  background: #f1f6ff;
+  color: #1a3a78;
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.home-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 10px 24px rgba(23, 30, 47, 0.07);
+  padding: 1rem;
+}
+
+.home-card h2 {
+  margin: 0;
+  font-family: 'Fraunces', 'Times New Roman', serif;
+  font-size: 1.1rem;
+}
+
+.home-card > p {
+  margin: 0.2rem 0 0.7rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.home-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.home-card a {
+  color: #173f82;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.home-card a:hover {
+  text-decoration: underline;
 }
 
 .module-view {
@@ -321,6 +427,11 @@ body {
 
   .sidebar-groups {
     grid-template-columns: 1fr;
+  }
+
+  .home-shell {
+    padding: 1.2rem;
+    gap: 1.2rem;
   }
 
   .module-view {

@@ -1,15 +1,15 @@
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Layout } from './components/Layout'
+import { HomePage } from './components/HomePage'
 import { NotesPanel } from './components/NotesPanel'
 import { registry } from './registry'
 
 export default function App() {
-  const first = registry[0]
-
   return (
     <HashRouter>
       <Layout>
         <Routes>
+          <Route path="/" element={<HomePage />} />
           {registry.map((mod) => (
             <Route
               key={mod.meta.id}
@@ -17,17 +17,7 @@ export default function App() {
               element={<ModuleView mod={mod} />}
             />
           ))}
-          {first && <Route path="*" element={<Navigate to={`/${first.meta.id}`} replace />} />}
-          {!first && (
-            <Route
-              path="*"
-              element={
-                <div className="flex items-center justify-center h-full text-gray-400">
-                  No modules registered yet.
-                </div>
-              }
-            />
-          )}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Layout>
     </HashRouter>

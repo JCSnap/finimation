@@ -20,6 +20,11 @@ export function Sidebar() {
         <p className="sidebar-eyebrow">Interactive Finance Lab</p>
         <span>finimation</span>
       </div>
+      <div className="sidebar-home">
+        <NavLink to="/" end className={({ isActive }) => `sidebar-link ${isActive ? 'is-active' : ''}`}>
+          Home
+        </NavLink>
+      </div>
       <div className="sidebar-groups">
         {Object.entries(grouped).map(([category, metas]) => (
           <div key={category} className="sidebar-group">
