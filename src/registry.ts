@@ -41,6 +41,21 @@ import npvIrrNotes from './modules/npv-irr/notes.md?raw'
 import { meta as loanAmortizationMeta } from './modules/loan-amortization/meta'
 import LoanAmortizationStudio from './modules/loan-amortization/index'
 import loanAmortizationNotes from './modules/loan-amortization/notes.md?raw'
+import { meta as threeStatementMeta } from './modules/three-statement-linkage/meta'
+import ThreeStatementLinkage from './modules/three-statement-linkage/index'
+import threeStatementNotes from './modules/three-statement-linkage/notes.md?raw'
+import { meta as bidAskSpreadMeta } from './modules/bid-ask-spread-formation/meta'
+import BidAskSpreadFormation from './modules/bid-ask-spread-formation/index'
+import bidAskSpreadNotes from './modules/bid-ask-spread-formation/notes.md?raw'
+import { meta as lobDynamicsMeta } from './modules/limit-order-book-dynamics/meta'
+import LimitOrderBookDynamics from './modules/limit-order-book-dynamics/index'
+import lobDynamicsNotes from './modules/limit-order-book-dynamics/notes.md?raw'
+import { meta as etfLoopMeta } from './modules/etf-creation-redemption-loop/meta'
+import EtfCreationRedemptionLoop from './modules/etf-creation-redemption-loop/index'
+import etfLoopNotes from './modules/etf-creation-redemption-loop/notes.md?raw'
+import { meta as fxTriArbMeta } from './modules/fx-triangular-arbitrage/meta'
+import FxTriangularArbitrage from './modules/fx-triangular-arbitrage/index'
+import fxTriArbNotes from './modules/fx-triangular-arbitrage/notes.md?raw'
 import { meta as vcDilutionMeta } from './modules/vc-dilution-rounds/meta'
 import VcDilutionRounds from './modules/vc-dilution-rounds/index'
 import vcDilutionNotes from './modules/vc-dilution-rounds/notes.md?raw'
@@ -62,6 +77,11 @@ export const registry: FinanceModule[] = [
   { meta: tvmMeta, component: TVM, notes: tvmNotes },
   { meta: npvIrrMeta, component: NpvIrrAnalyzer, notes: npvIrrNotes },
   { meta: loanAmortizationMeta, component: LoanAmortizationStudio, notes: loanAmortizationNotes },
+  { meta: threeStatementMeta, component: ThreeStatementLinkage, notes: threeStatementNotes },
+  { meta: bidAskSpreadMeta, component: BidAskSpreadFormation, notes: bidAskSpreadNotes },
+  { meta: lobDynamicsMeta, component: LimitOrderBookDynamics, notes: lobDynamicsNotes },
+  { meta: etfLoopMeta, component: EtfCreationRedemptionLoop, notes: etfLoopNotes },
+  { meta: fxTriArbMeta, component: FxTriangularArbitrage, notes: fxTriArbNotes },
   { meta: vcDilutionMeta, component: VcDilutionRounds, notes: vcDilutionNotes },
   { meta: vcPortfolioMeta, component: VcPortfolioReturns, notes: vcPortfolioNotes },
 ]

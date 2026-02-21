@@ -32,6 +32,11 @@ describe('registry', () => {
       'time-value-of-money',
       'npv-profile-irr',
       'loan-amortization-studio',
+      'three-statement-linkage',
+      'bid-ask-spread-formation',
+      'limit-order-book-dynamics',
+      'etf-creation-redemption-loop',
+      'fx-triangular-arbitrage',
       'vc-dilution-rounds',
       'vc-portfolio-returns',
     ]))
