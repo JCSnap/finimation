@@ -8,6 +8,9 @@ import greeksNotes from './modules/option-greeks/notes.md?raw'
 import { meta as volSurfaceMeta } from './modules/volatility-surface/meta'
 import VolatilitySurface from './modules/volatility-surface/index'
 import volSurfaceNotes from './modules/volatility-surface/notes.md?raw'
+import { meta as optionsMarginMeta } from './modules/options-margin/meta'
+import OptionsDailyMargin from './modules/options-margin/index'
+import optionsMarginNotes from './modules/options-margin/notes.md?raw'
 
 import { meta as bondsMeta } from './modules/bonds/meta'
 import BondPricing from './modules/bonds/index'
@@ -43,6 +46,7 @@ export const registry: FinanceModule[] = [
   { meta: optionsMeta, component: OptionsPayoff, notes: optionsNotes },
   { meta: greeksMeta, component: OptionGreeksExplorer, notes: greeksNotes },
   { meta: volSurfaceMeta, component: VolatilitySurface, notes: volSurfaceNotes },
+  { meta: optionsMarginMeta, component: OptionsDailyMargin, notes: optionsMarginNotes },
   { meta: bondsMeta, component: BondPricing, notes: bondsNotes },
   { meta: durationConvexityMeta, component: DurationConvexityLab, notes: durationConvexityNotes },
   { meta: yieldCurveMeta, component: YieldCurveBuilder, notes: yieldCurveNotes },

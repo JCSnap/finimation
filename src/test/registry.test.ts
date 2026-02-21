@@ -22,6 +22,7 @@ describe('registry', () => {
       'options-payoff',
       'option-greeks-explorer',
       'volatility-smile-surface',
+      'options-daily-margin',
       'bond-pricing',
       'duration-convexity-lab',
       'yield-curve-builder',
