@@ -15,4 +15,22 @@ describe('registry', () => {
       expect(typeof mod.notes).toBe('string')
     }
   })
+
+  it('contains all expected module ids', () => {
+    const ids = registry.map((mod) => mod.meta.id)
+    expect(ids).toEqual(expect.arrayContaining([
+      'options-payoff',
+      'option-greeks-explorer',
+      'volatility-smile-surface',
+      'bond-pricing',
+      'duration-convexity-lab',
+      'yield-curve-builder',
+      'efficient-frontier',
+      'cal-tangency-portfolio',
+      'capm-security-market-line',
+      'time-value-of-money',
+      'npv-profile-irr',
+      'loan-amortization-studio',
+    ]))
+  })
 })
