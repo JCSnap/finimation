@@ -1,6 +1,9 @@
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+import 'katex/dist/katex.min.css'
 import { Layout } from './components/Layout'
 import { registry } from './registry'
 
@@ -50,5 +53,9 @@ function ModuleView({ mod }: { mod: (typeof registry)[number] }) {
 }
 
 function NotesPanel({ notes }: { notes: string }) {
-  return <ReactMarkdown remarkPlugins={[remarkGfm]}>{notes}</ReactMarkdown>
+  return (
+    <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>
+      {notes}
+    </ReactMarkdown>
+  )
 }
