@@ -32,6 +32,8 @@ describe('registry', () => {
       'time-value-of-money',
       'npv-profile-irr',
       'loan-amortization-studio',
+      'vc-dilution-rounds',
+      'vc-portfolio-returns',
     ]))
   })
 })

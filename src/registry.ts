@@ -41,6 +41,12 @@ import npvIrrNotes from './modules/npv-irr/notes.md?raw'
 import { meta as loanAmortizationMeta } from './modules/loan-amortization/meta'
 import LoanAmortizationStudio from './modules/loan-amortization/index'
 import loanAmortizationNotes from './modules/loan-amortization/notes.md?raw'
+import { meta as vcDilutionMeta } from './modules/vc-dilution-rounds/meta'
+import VcDilutionRounds from './modules/vc-dilution-rounds/index'
+import vcDilutionNotes from './modules/vc-dilution-rounds/notes.md?raw'
+import { meta as vcPortfolioMeta } from './modules/vc-portfolio-returns/meta'
+import VcPortfolioReturns from './modules/vc-portfolio-returns/index'
+import vcPortfolioNotes from './modules/vc-portfolio-returns/notes.md?raw'
 
 export const registry: FinanceModule[] = [
   { meta: optionsMeta, component: OptionsPayoff, notes: optionsNotes },
@@ -56,4 +62,6 @@ export const registry: FinanceModule[] = [
   { meta: tvmMeta, component: TVM, notes: tvmNotes },
   { meta: npvIrrMeta, component: NpvIrrAnalyzer, notes: npvIrrNotes },
   { meta: loanAmortizationMeta, component: LoanAmortizationStudio, notes: loanAmortizationNotes },
+  { meta: vcDilutionMeta, component: VcDilutionRounds, notes: vcDilutionNotes },
+  { meta: vcPortfolioMeta, component: VcPortfolioReturns, notes: vcPortfolioNotes },
 ]
